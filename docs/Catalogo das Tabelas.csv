@@ -1,0 +1,137 @@
+"dbms","table_catalog","table_schema","table_name","column_name","ordinal_position","data_type","character_maximum_length","constraint_type","table_schema-2","table_name-2","column_name-2"
+"postgresql","varandas","public","usuario","id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","varandas","public","usuario","username",2,"character varying",150,"UNIQUE",NULL,NULL,NULL
+"postgresql","varandas","public","permissao","id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","varandas","public","permissao","nome",2,"character varying",100,"UNIQUE",NULL,NULL,NULL
+"postgresql","varandas","public","usuario_permissao","id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","varandas","public","usuario_permissao","usuario_id",2,"integer",NULL,"FOREIGN KEY","public","usuario","id"
+"postgresql","varandas","public","usuario_permissao","permissao_id",3,"integer",NULL,"FOREIGN KEY","public","permissao","id"
+"postgresql","varandas","public","moradores","id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","varandas","public","morador_info","id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","varandas","public","morador_info","morador_id",2,"integer",NULL,"FOREIGN KEY","public","moradores","id"
+"postgresql","varandas","public","veiculo","id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","varandas","public","morador_veiculo","morador_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","varandas","public","morador_veiculo","veiculo_id",2,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","varandas","public","morador_veiculo","morador_id",1,"integer",NULL,"FOREIGN KEY","public","moradores","id"
+"postgresql","varandas","public","morador_veiculo","veiculo_id",2,"integer",NULL,"FOREIGN KEY","public","veiculo","id"
+"postgresql","varandas","public","agendamento","id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","varandas","public","visitante","id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","varandas","public","prestador","id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","varandas","public","encomenda","id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","varandas","public","encomenda","numero_protocolo",2,"character varying",100,"UNIQUE",NULL,NULL,NULL
+"postgresql","varandas","public","ocorrencia","id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","varandas","public","ocorrencia","numero_ocorrencia",2,"character varying",100,"UNIQUE",NULL,NULL,NULL
+"postgresql","varandas","public","funcionario","id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","varandas","public","domesticos","id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","varandas","public","mudanca","id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","varandas","public","usuarios","id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","varandas","public","permissoes","id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","varandas","public","permissoes","user_id",2,"integer",NULL,"FOREIGN KEY","public","usuarios","id"
+"postgresql","varandas","public","visitante","cor",15,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","morador_info","data_nascimento",4,"date",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","funcionario","cidade",6,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","moradores","observacao",9,"text",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","mudanca","responsavel_bloco",5,"character varying",10,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","mudanca","horario",6,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","domesticos","funcao",5,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","encomenda","bloco",6,"character varying",10,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","prestador","rg_cpf",8,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","agendamento","dia",6,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","visitante","nome_visitante",3,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","moradores","email",7,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","funcionario","celular",9,"character varying",15,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","encomenda","tipo_encomenda",8,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","veiculo","marca",4,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","visitante","hora_saida",9,"time without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","encomenda","empresa_entrega",10,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","moradores","apartamento",3,"character varying",10,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","encomenda","numero_rastreamento",7,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","funcionario","observacoes",14,"text",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","mudanca","uso_elevador",10,"boolean",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","prestador","contratante_apto",12,"character varying",10,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","prestador","nome_empresa",2,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","agendamento","mes",7,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","ocorrencia","autor_ocorrencia",10,"character varying",3000,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","encomenda","data_hora_recebimento",3,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","domesticos","bloco",4,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","moradores","nome",2,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","veiculo","cor",3,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","agendamento","apartamento",3,"character varying",10,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","funcionario","bairro",4,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","encomenda","observacoes",11,"text",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","encomenda","descricao_encomenda",9,"text",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","prestador","hora_entrada",5,"time without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","domesticos","telefone",7,"character varying",15,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","prestador","data",4,"date",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","visitante","visitando",5,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","encomenda","nome_destinatario",4,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","visitante","marca",13,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","funcionario","endereco",3,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","ocorrencia","descricao_ocorrencia",11,"text",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","prestador","autorizou",14,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","visitante","vaga",11,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","mudanca","data_mudanca",2,"date",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","funcionario","telefone",8,"character varying",15,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","prestador","contratante_bloco",13,"character varying",10,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","prestador","contratante_tipo",11,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","funcionario","horario_trabalho",12,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","permissoes","permissao",3,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","visitante","bloco",7,"character varying",10,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","mudanca","nome_empresa",7,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","prestador","tipo_servico",3,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","agendamento","observacoes",11,"text",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","usuario","password",3,"character varying",128,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","visitante","modelo",14,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","mudanca","iscar_saindo",9,"boolean",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","encomenda","apartamento",5,"character varying",10,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","mudanca","responsavel_apto",4,"character varying",10,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","veiculo","placa",2,"character varying",10,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","visitante","autorizou",10,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","agendamento","ano",8,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","funcionario","nome",2,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","encomenda","cpf_rg_entregador",13,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","agendamento","nome_morador",2,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","funcionario","uf",7,"character varying",2,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","mudanca","uso_escada",11,"boolean",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","prestador","telefone",9,"character varying",15,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","agendamento","convidados",12,"text",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","encomenda","nome_porteiro",14,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","encomenda","nome_entregador",12,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","encomenda","nome_retirou",15,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","domesticos","horario",6,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","moradores","telefone1",5,"character varying",15,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","moradores","bloco",4,"character varying",10,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","mudanca","iscar",12,"boolean",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","domesticos","nome",2,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","ocorrencia","nome_funcionario",4,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","ocorrencia","bloco",9,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","funcionario","admitido_em",13,"date",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","ocorrencia","funcao_funcionario",5,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","agendamento","periodo",9,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","visitante","data",2,"date",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","visitante","hora_entrada",8,"time without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","prestador","hora_saida",6,"time without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","ocorrencia","data_registro",7,"date",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","veiculo","modelo",5,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","agendamento","funcionario",10,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","visitante","placa",12,"character varying",10,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","morador_info","nome",3,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","prestador","nome_prestador",7,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","domesticos","apartamento",3,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","agendamento","local",5,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","funcionario","funcao_cargo",11,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","moradores","email2",8,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","funcionario","email",10,"character varying",254,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","agendamento","bloco",4,"character varying",10,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","prestador","contratante_nome",10,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","usuarios","username",2,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","usuarios","password",3,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","visitante","apartamento",6,"character varying",10,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","ocorrencia","hora_registro",6,"time without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","ocorrencia","unidade_envolvida",8,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","funcionario","cep",5,"character varying",10,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","moradores","telefone2",6,"character varying",15,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","visitante","rg_cpf",4,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","ocorrencia","data_ocorrencia",3,"date",NULL,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","mudanca","responsavel_nome",3,"character varying",100,NULL,NULL,NULL,NULL
+"postgresql","varandas","public","mudanca","iscar_entrando",8,"boolean",NULL,NULL,NULL,NULL,NULL

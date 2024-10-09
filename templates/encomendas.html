@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Encomendas</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="/templates/assets/img/favicon.png" rel="icon" />
+    <link href="/templates/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Vendor CSS Files -->
+    <link href="/templates/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/templates/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="/templates/assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="/templates/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="/templates/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="/templates/assets/css/main.css" rel="stylesheet" />
+
+</head>
+
+<body class="visitante-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+            <a href="/index.html" class="logo d-flex align-items-center me-auto">
+                <img src="/templates/assets/img/logo.jpg" alt="">
+                <h1 class="sitename">Condomínio Varandas do Praia</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted" href="/menu">Menu</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Page Title -->
+        <div class="page-title" data-aos="fade">
+            <div class="container">
+                <nav class="breadcrumbs">
+                </nav>
+                <h1>Encomendas</h1>
+            </div>
+        </div>
+        <!-- End Page Title -->
+
+        <!-- Script para gerar número de protocolo e data/hora atual -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                function gerarNumeroProtocolo() {
+                    const timestamp = Date.now().toString();
+                    const randomNum = Math.floor(Math.random() * 1000).toString().padStart(3, '0'); 
+                    return `PROTO-${timestamp}-${randomNum}`;
+                }
+
+                function obterDataHoraAtual() {
+                    const agora = new Date();
+                    const ano = agora.getFullYear();
+                    const mes = String(agora.getMonth() + 1).padStart(2, '0');
+                    const dia = String(agora.getDate()).padStart(2, '0');
+                    const horas = String(agora.getHours()).padStart(2, '0');
+                    const minutos = String(agora.getMinutes()).padStart(2, '0');
+                    return `${ano}-${mes}-${dia}T${horas}:${minutos}`;
+                }
+
+                const inputProtocolo = document.getElementById('numero-protocolo');
+                inputProtocolo.value = gerarNumeroProtocolo();
+
+                const inputDataHora = document.getElementById('data-hora-recebimento');
+                inputDataHora.value = obterDataHoraAtual();
+            });
+        </script>
+        
+        <!-- Seção do formulário de encomendas -->
+        <section id="starter-section" class="starter-section section">
+            <div class="container" data-aos="fade-up">
+                <form id="encomendas-form">
+                    <h4>Informações da Encomenda</h4>
+                    <!-- Campo para número do protocolo -->
+                    <div class="mb-3">
+                        <label for="numero-protocolo" class="form-label">Número do Protocolo</label>
+                        <input type="text" class="form-control" id="numero-protocolo" name="numero-protocolo" value="AUTO_GENERATED" readonly>
+                    </div>
+                    <!-- Campo para data e hora do recebimento -->
+                    <div class="mb-3">
+                        <label for="data-hora-recebimento" class="form-label">Data e Hora do Recebimento</label>
+                        <input type="datetime-local" class="form-control" id="data-hora-recebimento" name="data-hora-recebimento" value="AUTO_GENERATED" readonly>
+                    </div>
+                    <!-- Campo para nome do destinatário -->
+                    <div class="mb-3">
+                        <label for="nome-destinatario" class="form-label">Nome do Destinatário</label>
+                        <input type="text" class="form-control" id="nome-destinatario" name="nome-destinatario" required>
+                    </div>
+                    <!-- Campo para apartamento -->
+                    <div class="mb-3">
+                        <label for="apartamento" class="form-label">Apartamento</label>
+                        <input type="text" class="form-control" id="apartamento" name="apartamento" required>
+                    </div>
+                    <!-- Campo para bloco -->
+                    <div class="mb-3">
+                        <label for="bloco" class="form-label">Bloco</label>
+                        <input type="text" class="form-control" id="bloco" name="bloco" required>
+                    </div>
+                    <!-- Campo para número de rastreamento -->
+                    <div class="mb-3">
+                        <label for="numero-rastreamento" class="form-label">Número de Rastreamento</label>
+                        <input type="text" class="form-control" id="numero-rastreamento" name="numero-rastreamento" required>
+                    </div>
+                    <!-- Campo para tipo de encomenda -->
+                    <div class="mb-3">
+                        <label for="tipo-encomenda" class="form-label">Tipo de Encomenda</label>
+                        <select class="form-control" id="tipo-encomenda" name="tipo-encomenda" required>
+                            <option value="Pacote">Pacote</option>
+                            <option value="Carta">Carta</option>
+                            <option value="Objeto Grande">Objeto Grande</option>
+                        </select>
+                    </div>
+                    <!-- Campo para descrição da encomenda -->
+                    <div class="mb-3">
+                        <label for="descricao-encomenda" class="form-label">Descrição da Encomenda</label>
+                        <textarea class="form-control" id="descricao-encomenda" name="descricao-encomenda" rows="3"></textarea>
+                    </div>
+                    <!-- Campo para empresa de entrega -->
+                    <div class="mb-3">
+                        <label for="empresa-entrega" class="form-label">Empresa de Entrega</label>
+                        <input type="text" class="form-control" id="empresa-entrega" name="empresa-entrega" required>
+                    </div>
+                    <!-- Campo para observações -->
+                    <div class="mb-3">
+                        <label for="observacoes" class="form-label">Observações</label>
+                        <textarea class="form-control" id="observacoes" name="observacoes" rows="3"></textarea>
+                    </div>
+
+                    <h4>Informações do Entregador</h4>
+                    <!-- Campo para nome do entregador -->
+                    <div class="mb-3">
+                        <label for="nome-entregador" class="form-label">Nome do Entregador</label>
+                        <input type="text" class="form-control" id="nome-entregador" name="nome-entregador" required>
+                    </div>
+                    <!-- Campo para CPF/RG do entregador -->
+                    <div class="mb-3">
+                        <label for="cpf-rg-entregador" class="form-label">CPF/RG do Entregador</label>
+                        <input type="text" class="form-control" id="cpf-rg-entregador" name="cpf-rg-entregador">
+                    </div>
+
+                    <h4>Informações do Porteiro</h4>
+                    <!-- Campo para nome do porteiro -->
+                    <div class="mb-3">
+                        <label for="nome-porteiro" class="form-label">Nome do Porteiro</label>
+                        <input type="text" class="form-control" id="nome-porteiro" name="nome-porteiro" required>
+                    </div>
+                    <!-- Campo para nome de quem retirou da portaria -->
+                    <div class="mb-3">
+                        <label for="nome-retirou" class="form-label">Nome de quem retirou da portaria</label>
+                        <input type="text" class="form-control" id="nome-retirou" name="nome-retirou" required>
+                    </div>
+
+                    <!-- Botão para enviar o formulário -->
+                    <button type="submit" class="btn btn-primary">Registrar Encomenda</button>
+                </form>
+            </div>
+        </section>
+
+        <script>
+        document.getElementById('encomendas-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = {};
+
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            try {
+                const response = await fetch('/encomendas', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (!response.ok) {
+                    throw new Error('Erro ao registrar encomenda');
+                }
+
+                const result = await response.json();
+                console.log('Encomenda registrada com sucesso:', result);
+
+                // Limpa o formulário após o envio bem-sucedido
+                form.reset();
+            } catch (error) {
+                console.error('Erro:', error);
+            }
+        });
+        </script>
+
+        <!-- Main JS File -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
+        <script src="/templates/assets/js/main.js"></script>
+        <script src="/templates/assets/js/script.js"></script>
+
+    </main>
+
+    <footer id="footer" class="footer">
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="/templates/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/templates/assets/vendor/php-email-form/validate.js"></script>
+    <script src="/templates/assets/vendor/aos/aos.js"></script>
+    <script src="/templates/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/templates/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/templates/assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="/templates/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="/templates/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="/templates/assets/js/main.js"></script>
+</body>
+
+</html>

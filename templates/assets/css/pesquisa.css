@@ -1,0 +1,14 @@
+.resultados-container {
+    display: none; /* Esconde a seção de resultados inicialmente */
+}
+
+#sem-resultados {
+    display: block; /* Mostra a mensagem "Nenhum resultado encontrado" inicialmente */
+}
+
+.list-group-item {
+    /* Estilos para os itens da lista */
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+}

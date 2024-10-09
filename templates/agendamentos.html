@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Agendamentos</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/templates/assets/img/favicon.png" rel="icon">
+  <link href="/templates/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/templates/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/templates/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/templates/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/templates/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/templates/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="/templates/assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="agendamento-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="/index.html" class="logo d-flex align-items-center me-auto">
+        <img src="/templates/assets/img/logo.jpg" alt="">
+        <h1 class="sitename">Condomínio Varandas do Praia</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="/menu">Menu</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+        </nav>
+        <h1>Agendamentos</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Seção do formulário de agendamento -->
+    <section id="starter-section" class="starter-section section">
+      <div class="container" data-aos="fade-up">
+        <form id="register-form" action="/agendamentos" method="POST">
+          <!-- Campo para nome do morador -->
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome do Morador</label>
+            <input type="text" class="form-control" id="nome_morador" name="nome_morador" required>
+          </div>
+          <!-- Campo para apartamento -->
+          <div class="mb-3">
+            <label for="apartamento" class="form-label">Apartamento</label>
+            <input type="text" class="form-control" id="apartamento" name="apartamento" required>
+          </div>
+          <!-- Campo para bloco -->
+          <div class="mb-3">
+            <label for="bloco" class="form-label">Bloco</label>
+            <input type="text" class="form-control" id="bloco" name="bloco" required>
+          </div>
+          <!-- Campo para local -->
+          <div class="mb-3">
+            <label for="local" class="form-label">Local</label>
+            <select class="form-control" id="local" name="local" required>
+              <option value="">Selecione</option>
+              <option value="salão de festas">Salão de Festas</option>
+              <option value="quiosque bloco 1">Quiosque Bloco 1</option>
+              <option value="quiosque bloco 2">Quiosque Bloco 2</option>
+              <option value="quiosque bloco 3">Quiosque Bloco 3</option>
+              <option value="quiosque bloco 4">Quiosque Bloco 4</option>
+            </select>
+          </div>
+          <!-- Campo para data -->
+          <div class="mb-3">
+            <label for="data" class="form-label">Data</label>
+            <div class="d-flex">
+              <input type="number" class="form-control me-2" id="dia" name="dia" placeholder="Dia" required>
+              <input type="number" class="form-control me-2" id="mes" name="mes" placeholder="Mês" required>
+              <input type="number" class="form-control" id="ano" name="ano" placeholder="Ano" required>
+            </div>
+          </div>
+          <!-- Campo para período -->
+          <div class="mb-3">
+            <label for="periodo" class="form-label">Período</label>
+            <select class="form-control" id="periodo" name="periodo" required>
+              <option value="">Selecione</option>
+              <option value="manhã">Manhã</option>
+              <option value="tarde">Tarde</option>
+              <option value="noite">Noite</option>
+            </select>
+          </div>
+          <!-- Campo para funcionário -->
+          <div class="mb-3">
+            <label for="funcionario" class="form-label">Funcionário</label>
+            <input type="text" class="form-control" id="funcionario" name="funcionario" required>
+          </div>
+          <!-- Campo para observações -->
+          <div class="mb-3">
+            <label for="observacoes" class="form-label">Observações</label>
+            <textarea class="form-control" id="observacoes" name="observacoes" rows="3"></textarea>
+          </div>
+          <!-- Campo para lista de convidados -->
+          <div class="mb-3">
+            <label for="convidados" class="form-label">Lista de Convidados</label>
+            <textarea class="form-control" id="convidados" name="convidados" rows="3"></textarea>
+          </div>
+          <!-- Botão para enviar o formulário -->
+          <button type="submit" class="btn btn-primary">Agendar</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Main JS File -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
+    <script src="/templates/assets/js/main.js"></script>
+    <script src="/templates/assets/js/script.js"></script>
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/templates/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/templates/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/templates/assets/vendor/aos/aos.js"></script>
+  <script src="/templates/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/templates/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/templates/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="/templates/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="/templates/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="/templates/assets/js/main.js"></script>
+
+</body>
+
+</html>

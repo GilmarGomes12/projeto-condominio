@@ -1,0 +1,39 @@
+# Diretório binário
+/bin/
+/out/
+
+# Dependências do módulo Go
+/pkg/
+/vendor/
+
+# Arquivos de build
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Arquivos de teste
+*.test
+
+# Diretórios de IDEs
+.idea/
+.vscode/
+*.swp
+
+# Arquivos de log
+*.log
+
+# Arquivos de configuração específicos do ambiente
+.env
+
+# Arquivos de cache
+*.cache
+*.tmp
+
+# Arquivos de cobertura de teste
+*.cover
+*.cov
+
+# Arquivos de compilação cruzada
+*.a

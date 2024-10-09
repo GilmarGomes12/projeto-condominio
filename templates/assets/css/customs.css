@@ -1,0 +1,41 @@
+/* Estilos para a seção hero */
+#hero {
+    background-color: #333; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto */
+    padding: 50px 0; /* Espaçamento interno */
+    text-align: center; /* Centralizar o texto */
+}
+
+#hero .form-group {
+    margin-bottom: 20px; /* Espaçamento entre os grupos de formulário */
+}
+
+#hero label {
+    display: block; /* Exibir como bloco */
+    margin-bottom: 5px; /* Espaçamento abaixo do rótulo */
+    font-weight: bold; /* Negrito */
+}
+
+#hero input[type="text"],
+#hero input[type="email"],
+#hero input[type="password"],
+#hero select {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Espaçamento abaixo do campo */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+#hero button[type="submit"] {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+#hero button[type="submit"]:hover {
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
